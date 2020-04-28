@@ -12,12 +12,12 @@ const Navigation = () => {
                 <li className="nav-item">
                     <NavLink exact to="/" className="nav-link">Все посы</NavLink>
                 </li>
-                <li className="nav-item">
-                    <NavLink to="/all-users" className="nav-link">Все пользователи</NavLink>
-                </li>
                 <div className="d-flex ml-auto">
                     <li className="nav-item">
                         <NavLink to="/my-info" className="nav-link">Мой кабинет</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/all-users" className="nav-link">Редактировать пользователей</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/create-post" className="nav-link">Создать пост</NavLink>
