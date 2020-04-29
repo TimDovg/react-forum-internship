@@ -1,12 +1,13 @@
 import React, {useReducer} from "react"
 import {PostsContext} from "./PostsContext"
 import {PostsReducer} from "./PostsReducer"
-import {GET_POSTS, SET_LOADING} from "../types"
+import {GET_POSTS, SET_LOADING, SET_POSTS_FOR_SEARCHING} from "../types"
 import axios from '../../axios/axios-forum'
 
 export const PostsState = ({children}) => {
     const initialState = {
         posts: [],
+        postsForSearching: [],
         loading: true
     }
 
@@ -25,10 +26,15 @@ export const PostsState = ({children}) => {
 
     const setLoading = () => dispatch({type: SET_LOADING})
 
+    const setPostsForSearching = posts => dispatch({
+        type: SET_POSTS_FOR_SEARCHING,
+        payload: posts
+    })
+
     return (
         <PostsContext.Provider value={{
             state,
-            getPosts, setLoading
+            getPosts, setLoading, setPostsForSearching
         }}>
             {children}
         </PostsContext.Provider>
