@@ -10,7 +10,7 @@ const Navigation = () => {
             </div>
             <ul className="navbar-nav w-100">
                 <li className="nav-item">
-                    <NavLink to="/posts" className="nav-link">Все посы</NavLink>
+                    <NavLink to="/posts" className="nav-link">Все посты</NavLink>
                 </li>
                 <div className="d-flex ml-auto">
                     <li className="nav-item">
