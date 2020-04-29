@@ -14,14 +14,14 @@ code {
     monospace;
 }
 
-.cursor-default {
-  cursor: default;
-}
-
 .pl-35 {
   padding-left: 35px;
 }
 
 .w-35 {
   width: 35%;
+}
+
+*:not(input, textarea, a, button) {
+  cursor: default;
 }

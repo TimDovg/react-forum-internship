@@ -14,6 +14,7 @@ export const ShowPost = ({match}) => {
 
     // для написания коммента
     const myComment = {
+        created: false,
         typeComment: false,
         invalid: false,
         postId: postNumber,
@@ -39,15 +40,20 @@ export const ShowPost = ({match}) => {
             return setValue({...internalState, invalid: true})
         }
 
+        setValue({...internalState, created: true, invalid: false})
+
         // сброс
-        addMyComment({
-            postId: internalState.postId,
-            id: internalState.id,
-            name: internalState.name.trim(),
-            email: internalState.email.trim(),
-            body: internalState.body.trim()
-        })
-        setValue(myComment)
+        const timeout = setTimeout(() => {
+            addMyComment({
+                postId: internalState.postId,
+                id: internalState.id,
+                name: internalState.name.trim(),
+                email: internalState.email.trim(),
+                body: internalState.body.trim()
+            })
+            setValue(myComment)
+            window.clearTimeout(timeout)
+        }, 1500)
     }
 
     useEffect(() => {

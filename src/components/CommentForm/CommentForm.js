@@ -16,8 +16,12 @@ export const CommentForm = ({internalState, typeCommentHandler, nameHandler, ema
                 <textarea onChange={bodyHandler} value={internalState.body} className="form-control" id="forBody"
                           rows="3"/>
                 <div className="d-flex justify-content-end">
-                    {internalState.invalid ?
-                        <small className="m-2 text-danger mr-auto">Заполните все поля!</small> : null}
+                    {internalState.invalid
+                        ? <small className="m-2 text-danger mr-auto">Заполните все поля!</small>
+                        : internalState.created
+                            ? <small className="m-2 text-success mr-auto">Отзыв создан!</small>
+                            : null
+                    }
                     <button onClick={submitHandler} className="btn btn-dark mt-3 mb-2">НАПИСАТЬ</button>
                 </div>
             </div>

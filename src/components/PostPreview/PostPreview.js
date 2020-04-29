@@ -10,7 +10,7 @@ const PostPreview = ({post, match}) => {
 
     return (
         <>
-            <div className="col-sm-3 mb-4 cursor-default">
+            <div className="col-sm-3 mb-4">
                 <div className="card bg-dark text-white">
                     <div className="card-body d-flex flex-column">
                         <h5 className="card-title">{post.title.toUpperCase()}</h5>
