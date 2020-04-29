@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const MyInfo = () => {
     console.log('DATA: ', process.env.REACT_APP_ADMIN_LOGIN, process.env.REACT_APP_ADMIN_PASSWORD)
@@ -8,4 +8,4 @@ const MyInfo = () => {
     )
 }
 
-export default MyInfo;
+export default MyInfo
