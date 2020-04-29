@@ -14,7 +14,7 @@ const PostPreview = ({post, match}) => {
                 <div className="card bg-dark text-white">
                     <div className="card-body d-flex flex-column">
                         <h5 className="card-title">{post.title.toUpperCase()}</h5>
-                        <p className="card-text">{body}</p>
+                        <p className="card-text" style={{'whiteSpace': 'pre-line'}}>{body}</p>
                         <p className="font-italic text-secondary">Автор: {userName}</p>
                         <Link to={`${match.url}/${post.id}`} className="btn btn-primary ml-5 mr-5">ПЕРЕЙТИ</Link>
                     </div>

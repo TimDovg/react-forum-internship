@@ -35,6 +35,7 @@ const ShowAllPosts = () => {
                 value={value}
                 label={'Поиск:'}
                 placeholder={'Введите имя пользователя...'}
+                matchCount={value ? posts.length : value}
                 onChange={onChangeSearchHandler}
             />
 
@@ -47,7 +48,7 @@ const ShowAllPosts = () => {
                             key={index}
                             post={post}
                         />)
-                        : <div className="pl-3">У этого пользователя нету постов</div>
+                        : <div className="pl-3">У пользователя <strong>{value}</strong> нету постов</div>
                     }
                 </div>
             }
