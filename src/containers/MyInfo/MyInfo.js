@@ -1,11 +1,20 @@
-import React from "react"
+import React, {useContext} from "react"
+import Auth from "../../components/Auth/Auth"
+import MyProfile from "../../components/MyProfile/MyProfile"
+import {AuthContext} from "../../context/Auth/AuthContext"
 
 const MyInfo = () => {
-    console.log('DATA: ', process.env.REACT_APP_ADMIN_LOGIN, process.env.REACT_APP_ADMIN_PASSWORD)
+    const {state: authState} = useContext(AuthContext)
 
-    return (
-        <h1>MyInfo</h1>
-    )
+    if (authState.token) {
+        return (
+            <MyProfile/>
+        )
+    } else {
+        return (
+            <Auth/>
+        )
+    }
 }
 
 export default MyInfo

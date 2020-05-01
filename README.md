@@ -1,3 +1,8 @@
+﻿Admin is: timdovg
+Password: 123321
+
+You can change it in .env.local
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
