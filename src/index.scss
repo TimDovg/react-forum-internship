@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.pl-35 {
+  padding-left: 35px;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.m-4-5 {
+  margin: 2rem !important;
+}
+
+.ml-4-5 {
+  margin-left: 2.2rem !important;
+}
+
+*:not(input, textarea, a, button) {
+  cursor: default;
+}
