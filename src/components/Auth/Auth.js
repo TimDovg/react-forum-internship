@@ -4,7 +4,7 @@ import axios from 'axios'
 import { withRouter } from 'react-router-dom'
 import { AuthContext } from '../../context/Auth/AuthContext'
 
-const API_KEY = 'AIzaSyCQnIpgImbEVrEURGD2r8URqTouCpjUFwI'
+const API_KEY = process.env.REACT_APP_API_KEY
 
 const createUrl = type => {
   switch (type) {
